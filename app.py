@@ -330,6 +330,13 @@ function sendControl(){
             result ? result.message : "No server response";
     });
 }
+socket.on("connect", () => {
+    console.log("CONNECTED:", socket.id);
+});
+
+socket.on("connect_error", (error) => {
+    alert("Connection Error: " + error.message);
+});
 </script>
 </body>
 </html>
